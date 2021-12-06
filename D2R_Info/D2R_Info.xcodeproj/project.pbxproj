@@ -13,7 +13,10 @@
 		FA802F65273FEB2A00D85907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA802F63273FEB2A00D85907 /* Main.storyboard */; };
 		FA802F67273FEB2C00D85907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA802F66273FEB2C00D85907 /* Assets.xcassets */; };
 		FA802F6A273FEB2C00D85907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA802F68273FEB2C00D85907 /* LaunchScreen.storyboard */; };
-		FA802F73273FFB8900D85907 /* UpgrandeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA802F72273FFB8900D85907 /* UpgrandeViewController.swift */; };
+		FA802F73273FFB8900D85907 /* UpgrandDetialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA802F72273FFB8900D85907 /* UpgrandDetialController.swift */; };
+		FA802F7827467AA500D85907 /* SquareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA802F7727467AA500D85907 /* SquareInfo.swift */; };
+		FA8B37452751F74F0034D14E /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B37442751F74F0034D14E /* SquareViewController.swift */; };
+		FAE48131275E5A7A0087C3BC /* EmbledTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE48130275E5A7A0087C3BC /* EmbledTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +28,10 @@
 		FA802F66273FEB2C00D85907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA802F69273FEB2C00D85907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA802F6B273FEB2C00D85907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA802F72273FFB8900D85907 /* UpgrandeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgrandeViewController.swift; sourceTree = "<group>"; };
+		FA802F72273FFB8900D85907 /* UpgrandDetialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgrandDetialController.swift; sourceTree = "<group>"; };
+		FA802F7727467AA500D85907 /* SquareInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareInfo.swift; sourceTree = "<group>"; };
+		FA8B37442751F74F0034D14E /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SquareViewController.swift; path = D2R_Info/Controller/SquareViewController.swift; sourceTree = SOURCE_ROOT; };
+		FAE48130275E5A7A0087C3BC /* EmbledTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbledTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,12 @@
 		FA802F5C273FEB2A00D85907 /* D2R_Info */ = {
 			isa = PBXGroup;
 			children = (
-				FA802F71273FFAF600D85907 /* upgrande */,
+				FA8B37432751F1CC0034D14E /* UIComponent */,
+				FA8B37422751F11F0034D14E /* View */,
+				FA8B37412751F0ED0034D14E /* Controller */,
+				FA802F7627467A7D00D85907 /* Model */,
 				FA802F5D273FEB2A00D85907 /* AppDelegate.swift */,
 				FA802F5F273FEB2A00D85907 /* SceneDelegate.swift */,
-				FA802F61273FEB2A00D85907 /* ViewController.swift */,
-				FA802F63273FEB2A00D85907 /* Main.storyboard */,
 				FA802F66273FEB2C00D85907 /* Assets.xcassets */,
 				FA802F68273FEB2C00D85907 /* LaunchScreen.storyboard */,
 				FA802F6B273FEB2C00D85907 /* Info.plist */,
@@ -70,12 +77,38 @@
 			path = D2R_Info;
 			sourceTree = "<group>";
 		};
-		FA802F71273FFAF600D85907 /* upgrande */ = {
+		FA802F7627467A7D00D85907 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA802F72273FFB8900D85907 /* UpgrandeViewController.swift */,
+				FA802F7727467AA500D85907 /* SquareInfo.swift */,
 			);
-			path = upgrande;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA8B37412751F0ED0034D14E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA8B37442751F74F0034D14E /* SquareViewController.swift */,
+				FA802F61273FEB2A00D85907 /* ViewController.swift */,
+				FAE48130275E5A7A0087C3BC /* EmbledTable.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA8B37422751F11F0034D14E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA802F63273FEB2A00D85907 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA8B37432751F1CC0034D14E /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FA802F72273FFB8900D85907 /* UpgrandDetialController.swift */,
+			);
+			path = UIComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,10 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA802F73273FFB8900D85907 /* UpgrandeViewController.swift in Sources */,
+				FA802F73273FFB8900D85907 /* UpgrandDetialController.swift in Sources */,
 				FA802F62273FEB2A00D85907 /* ViewController.swift in Sources */,
 				FA802F5E273FEB2A00D85907 /* AppDelegate.swift in Sources */,
+				FA802F7827467AA500D85907 /* SquareInfo.swift in Sources */,
+				FAE48131275E5A7A0087C3BC /* EmbledTable.swift in Sources */,
 				FA802F60273FEB2A00D85907 /* SceneDelegate.swift in Sources */,
+				FA8B37452751F74F0034D14E /* SquareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

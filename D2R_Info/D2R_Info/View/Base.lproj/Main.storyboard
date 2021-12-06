@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="afI-8x-je5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--D2R.Info-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="D2R_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="MenuSegue" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWD-65-Gwe">
+                                <rect key="frame" x="20" y="98" width="373.5" height="705"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlY-O3-L5o">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="705"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="方塊公式">
+                                            <backgroundConfiguration key="background" cornerRadius="0.0" image="knieht" imageContentMode="redraw"/>
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="5oO-bp-fGe" kind="show" id="eFC-FW-YJB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJb-JI-JQg">
+                                        <rect key="frame" x="114" y="0.0" width="135" height="705"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="符文之語">
+                                            <backgroundConfiguration key="background" image="kinesoso" imageContentMode="redraw"/>
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD9-NT-Tpg">
+                                        <rect key="frame" x="249" y="0.0" width="124.5" height="705"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="拓荒配點">
+                                            <backgroundConfiguration key="background" image="Runes-1" imageContentMode="redraw"/>
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vlY-O3-L5o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Pco-9w-bKp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rJb-JI-JQg" secondAttribute="trailing" constant="145" id="R84-PC-3jh"/>
+                            <constraint firstItem="vlY-O3-L5o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="VV6-dY-6nX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vlY-O3-L5o" secondAttribute="trailing" constant="280" id="iEH-Fz-Uzx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vlY-O3-L5o" secondAttribute="bottom" constant="10" id="pGu-b6-T0j"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="D2R.Info" id="M3d-wP-bui">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="Etf-RR-DTc"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.62318840579712" y="69.642857142857139"/>
+        </scene>
+        <!--方塊公式-->
+        <scene sceneID="XZ0-6C-Kdt">
+            <objects>
+                <viewController storyboardIdentifier="TypeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5oO-bp-fGe" customClass="SquareViewController" customModule="D2R_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Upgrande" id="jzf-Im-Eq2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYJ-aj-MJ9" customClass="EmbledTable" customModule="D2R_Info" customModuleProvider="target">
+                                <rect key="frame" x="20" y="114" width="374" height="585"/>
+                                <connections>
+                                    <segue destination="Yb3-B7-idf" kind="embed" id="3vP-Lh-IQp"/>
+                                </connections>
+                            </containerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fey-EL-BfX">
+                                <rect key="frame" x="0.0" y="707" width="414" height="150"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5oO-bp-fGe" id="qjK-Pd-Kxn"/>
+                                    <outlet property="delegate" destination="5oO-bp-fGe" id="7dt-9B-36h"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vh3-wd-Gao"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fey-EL-BfX" firstAttribute="trailing" secondItem="Vh3-wd-Gao" secondAttribute="trailing" id="R2R-iO-YUq"/>
+                            <constraint firstItem="Vh3-wd-Gao" firstAttribute="trailing" secondItem="eYJ-aj-MJ9" secondAttribute="trailing" constant="20" id="Sco-bP-rab"/>
+                            <constraint firstAttribute="bottom" secondItem="Fey-EL-BfX" secondAttribute="bottom" constant="39" id="VMk-9q-jTW"/>
+                            <constraint firstItem="eYJ-aj-MJ9" firstAttribute="leading" secondItem="Vh3-wd-Gao" secondAttribute="leading" constant="20" id="Vwo-Qz-sLW"/>
+                            <constraint firstItem="Vh3-wd-Gao" firstAttribute="bottom" secondItem="eYJ-aj-MJ9" secondAttribute="bottom" constant="114" id="bn3-Kl-JXi"/>
+                            <constraint firstItem="eYJ-aj-MJ9" firstAttribute="top" secondItem="Vh3-wd-Gao" secondAttribute="top" constant="26" id="fnc-y0-nya"/>
+                            <constraint firstItem="Fey-EL-BfX" firstAttribute="top" secondItem="eYJ-aj-MJ9" secondAttribute="bottom" constant="8" symbolic="YES" id="mRz-AY-GU1"/>
+                            <constraint firstItem="Fey-EL-BfX" firstAttribute="leading" secondItem="Vh3-wd-Gao" secondAttribute="leading" id="sXG-FM-EOX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="方塊公式" id="fs8-Gl-8nS">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="8OJ-k3-Cfr"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="embledTable" destination="eYJ-aj-MJ9" id="Lzg-xr-TRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZ8-1W-fsC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="761"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NVb-3t-d2H">
+            <objects>
+                <navigationController id="afI-8x-je5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Vg-Me-i4w">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PcR-Fv-xMs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0f-AE-kSU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-581" y="52"/>
+        </scene>
+        <!--Upgrand Detial Controller-->
+        <scene sceneID="DBT-af-vxv">
+            <objects>
+                <tableViewController storyboardIdentifier="DetialTable" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yb3-B7-idf" customClass="UpgrandDetialController" customModule="D2R_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="HJP-l2-iPw">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="585"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detialCell" id="kIR-wK-4kp">
+                                <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kIR-wK-4kp" id="1Hj-aA-aRX">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yb3-B7-idf" id="2pX-9g-f9K"/>
+                            <outlet property="delegate" destination="Yb3-B7-idf" id="iaC-iU-WHX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97V-g0-2YP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="853"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Runes-1" width="151" height="420"/>
+        <image name="kinesoso" width="240" height="554"/>
+        <image name="knieht" width="72" height="176"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

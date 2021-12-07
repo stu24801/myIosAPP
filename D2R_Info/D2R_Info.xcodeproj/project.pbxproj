@@ -17,6 +17,7 @@
 		FA802F7827467AA500D85907 /* SquareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA802F7727467AA500D85907 /* SquareInfo.swift */; };
 		FA8B37452751F74F0034D14E /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B37442751F74F0034D14E /* SquareViewController.swift */; };
 		FAE48131275E5A7A0087C3BC /* EmbledTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE48130275E5A7A0087C3BC /* EmbledTable.swift */; };
+		FAE48134275FAA6C0087C3BC /* Detial.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE48133275FAA6C0087C3BC /* Detial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FA802F7727467AA500D85907 /* SquareInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareInfo.swift; sourceTree = "<group>"; };
 		FA8B37442751F74F0034D14E /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SquareViewController.swift; path = D2R_Info/Controller/SquareViewController.swift; sourceTree = SOURCE_ROOT; };
 		FAE48130275E5A7A0087C3BC /* EmbledTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbledTable.swift; sourceTree = "<group>"; };
+		FAE48133275FAA6C0087C3BC /* Detial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FA802F72273FFB8900D85907 /* UpgrandDetialController.swift */,
+				FAE48133275FAA6C0087C3BC /* Detial.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			files = (
 				FA802F73273FFB8900D85907 /* UpgrandDetialController.swift in Sources */,
 				FA802F62273FEB2A00D85907 /* ViewController.swift in Sources */,
+				FAE48134275FAA6C0087C3BC /* Detial.swift in Sources */,
 				FA802F5E273FEB2A00D85907 /* AppDelegate.swift in Sources */,
 				FA802F7827467AA500D85907 /* SquareInfo.swift in Sources */,
 				FAE48131275E5A7A0087C3BC /* EmbledTable.swift in Sources */,

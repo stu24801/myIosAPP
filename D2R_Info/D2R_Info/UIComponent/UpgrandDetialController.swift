@@ -8,12 +8,9 @@
 
 import UIKit
 
-@objc protocol SquareViewDelegate {
-    func detialReturn(message:String)
-}
 class UpgrandDetialController: UITableViewController {
-   
-
+    
+    
     var type:Int = 0
     
     
@@ -23,7 +20,7 @@ class UpgrandDetialController: UITableViewController {
         "科 (Ko) + 藍姆(Lem) + 完美的鑽石（Perfect Diamond） + 進階獨特防具 = 防具的菁英版本 (天梯)",
         "拉爾(Ral) + 索爾(Sol) + 完美的綠寶石 （Perfect Emerald）+ 一般獨特武器 = 武器的進階版本",
         "盧姆(Lum) + 普爾(Pul) + 完美的綠寶石（Perfect Emerald） + 進階獨特武器 = 武器的菁英版本 (天梯)"
-    
+        
     ]
     var upgrande2 = [
         "歐特(Ort) + 安姆(Amn) + 完美的藍寶石（Perfect Sapphire）+ 一般稀有武器 = 武器的進階版本",
@@ -74,32 +71,50 @@ class UpgrandDetialController: UITableViewController {
         "拉爾(8)+防具=修復防具，但不修復聚氣",
         "拉爾(8)+防具+裂開的寶石=修復完全的防具"
     ]
-    
+    @IBOutlet var detialTable: UITableView!
     var squareCell = [[String]]()
+    
+    func loadData(){
+        self.detialTable.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "TypeController") as! SquareViewController
-
-
-        controller.delegate = self
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("changeType"), object: nil, queue: OperationQueue.main){
+            (notification) in
+            let data = notification.object as! Dictionary<String,String>
+            self.type = (data["type"] as! NSString).integerValue
+            // 開始刷新動
+            self.refreshControl?.beginRefreshing()
+            
+            // 使用 UIView.animate 彈性效果，並且更改 TableView 的 ContentOffset 使其位移
+            // 動畫結束之後使用 loadData()
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: UIView.AnimationOptions.curveEaseIn, animations: {
+                self.detialTable.setContentOffset(.zero, animated: true)
+                
+            }) { (finish) in
+                self.loadData()
+            }
+            
+        }
+        
+        
         squareCell = [self.runeFunction,self.upgrande1,self.upgrande2,self.upgrande3,self.upgrande4,self.upgrande5,self.upgrande6,self.upgrande7]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-   
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return squareCell[type].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "detialCell", for: indexPath)
-
-        cell.textLabel?.text=String(squareCell[type][indexPath.row]).trimmingCharacters(in: .whitespacesAndNewlines)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detialCell", for: indexPath) as! Detial
         
+        cell.setLabel(String(squareCell[type][indexPath.row]).trimmingCharacters(in: .whitespacesAndNewlines))
         return cell
         
     }
@@ -109,26 +124,18 @@ class UpgrandDetialController: UITableViewController {
         //取消選取的動畫
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
-
- 
-
+    
+    
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-extension UpgrandDetialController: SquareViewDelegate{
-    func detialReturn(message:String){
+     // MARK: - Navigation
      
-        
-        print(String("回傳訊息：") + message)
-        
-    }
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

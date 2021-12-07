@@ -10,9 +10,9 @@ import UIKit
 
 class SquareViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var embledTable: EmbledTable!
-    weak var delegate:SquareViewDelegate?
+   
     var type:Int = 0
-    var squareInfo = ["符文升級公式","獨特物品(暗金裝備)升級公式","稀有物品(黃色裝備)升級公式","普通裝備合成","任務裝備合成","藥水合成","打洞公式","修復公式","手工藝品"]
+    var squareInfo = ["符文升級公式","獨特物品(暗金裝備)升級公式","稀有物品(黃色裝備)升級公式","普通裝備合成","任務裝備合成","藥水合成","打洞公式","修復公式"]
    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -26,8 +26,9 @@ class SquareViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        self.delegate?.detialReturn(message: String(row))
-    
+        var sendData = [String:String]()
+        sendData["type"] = String(row)
+        NotificationCenter.default.post(name: Notification.Name("changeType"), object: sendData)
             
     }
    
